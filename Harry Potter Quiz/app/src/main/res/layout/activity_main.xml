@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/quiz_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Harry Potter (Quiz)"
+            android:textSize="32sp" />
+
+        <LinearLayout
+            android:id="@+id/first_question"
+            style="@style/Questions"
+            android:layout_below="@id/quiz_topic">
+
+            <TextView
+                style="@style/Size"
+                android:text="1) Who is Author of Harry Potter?"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                style="@style/Size"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/firstQuestion_Option1"
+                    style="@style/Size"
+                    android:text="Yoshito Usui" />
+
+                <RadioButton
+                    android:id="@+id/firstQuestion_Option2"
+                    style="@style/Size"
+                    android:text="Fujiko Fujio" />
+
+                <RadioButton
+                    android:id="@+id/firstQuestion_Option3"
+                    style="@style/Size"
+                    android:text="J. K. Rowling" />
+
+                <RadioButton
+                    android:id="@+id/firstQuestion_Option4"
+                    style="@style/Size"
+                    android:text="Chetan Bhagat" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            style="@style/separation"
+            android:layout_below="@id/first_question" />
+
+        <LinearLayout
+            android:id="@+id/second_question"
+            style="@style/Questions"
+            android:layout_below="@id/first_question">
+
+            <TextView
+                style="@style/Size"
+                android:text="2) Which of the following charcter is not a part of Harry Potter"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                style="@style/Size"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/SecondQuestion_Option1"
+                    style="@style/Size"
+                    android:text="Professor Snape" />
+
+                <RadioButton
+                    android:id="@+id/SecondQuestion_Option2"
+                    style="@style/Size"
+                    android:text="Lord Voldemort" />
+
+                <RadioButton
+                    android:id="@+id/SecondQuestion_Option3"
+                    style="@style/Size"
+                    android:text="Ron Weasley" />
+
+                <RadioButton
+                    android:id="@+id/SecondQuestion_Option4"
+                    style="@style/Size"
+                    android:text="Nobi Nobita" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            style="@style/separation"
+            android:layout_below="@id/second_question" />
+
+        <LinearLayout
+            android:id="@+id/third_question"
+            style="@style/Questions"
+            android:layout_below="@id/second_question">
+
+            <TextView
+                style="@style/Size"
+                android:text="3) What is the name of the object in which a person conceals his part of the soul?"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/thirdQuestion_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Write your answer here"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <View
+            style="@style/separation"
+            android:layout_below="@id/third_question" />
+
+        <LinearLayout
+            android:id="@+id/fourth_question"
+            style="@style/Questions"
+            android:layout_below="@id/third_question">
+
+            <TextView
+                style="@style/Size"
+                android:text="4) Which of the following are the spells seen in Harry Potter(Check all that applies)?"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox1"
+                style="@style/CheckBox"
+                android:text="Sectumsempra" />
+
+            <CheckBox
+                android:id="@+id/checkbox2"
+                style="@style/CheckBox"
+                android:text="Gryffindor" />
+
+            <CheckBox
+                android:id="@+id/checkbox3"
+                style="@style/CheckBox"
+                android:text="Crucio" />
+
+            <CheckBox
+                android:id="@+id/checkbox4"
+                style="@style/CheckBox"
+                android:text="Petrificus Totalus" />
+
+            <CheckBox
+                android:id="@+id/checkbox5"
+                style="@style/CheckBox"
+                android:text="Slytherin" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/analyse_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fourth_question"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="analyseAnswers"
+            android:text="Analyse" />
+    </RelativeLayout>
+</ScrollView>

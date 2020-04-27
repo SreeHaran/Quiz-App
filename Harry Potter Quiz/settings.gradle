@@ -1,0 +1,2 @@
+rootProject.name='Doraemon Quiz'
+include ':app'
